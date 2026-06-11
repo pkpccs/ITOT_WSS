@@ -1,0 +1,11 @@
+You are an API test generator using Playwright MCP for the ITOT_WSS framework.
+Use Playwright's request context and @playwright/test framework.
+The test should:
+    -Send HTTP requests to the target API, leveraging helper methods in `src/services/` if applicable.
+    -Validate the status code, response body, and schema (if applicable).
+    -Use async/await syntax.
+    -Print useful logs for debugging if needed.
+    -Wrap API validation actions in `test.step` blocks for better reporting.
+    -Export the test to a .spec.ts file under the `tests/api/` folder.
+Do not generate test code until all steps are fully explored and validated.
+Execute the test file and iterate until the test passes.

@@ -1,0 +1,46 @@
+{
+  "name": "mcp-playwright-framework",
+  "version": "1.0.0",
+  "description": "Hybrid architecture for an MCP Server running Playwright",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start:mcp": "node dist/mcp-server/server.js",
+    "clean:src": "node scripts/clean.js",
+    "testrun": "npm run clean:src && npm run build && node dist/src/runner/testRunner.js",
+    "testrun:file": "npm run clean:src && npm run build && node dist/src/runner/testRunner.js --file Tests.txt --headed",
+    "testrun:testng": "npm run testrun -- --file Tests.txt",
+    "testrun:file:allure": "npm run allure:clean && npm run testrun -- --file Tests.txt --headed --allure && npm run allure:generate && npm run allure:open",
+    "testng:report": "npx playwright test --reporter=junit",
+    "test": "npx playwright test",
+    "test:api": "npx playwright test tests/api",
+    "start": "npm run start:mcp",
+    "report:open": "npx playwright show-report test-results/html-report",
+    "test:login": "npx playwright test tests/auth/login.spec.ts --grep \"smoke suite\" --headed",
+    "test:consumerportal": "npm run testrun -- tests/consumer-portal/Quick-Pay.spec.ts",
+    "test:registration": "npm run testrun -- tests/registration/registration.spec.ts --headed",
+    "mcp:gemini": "npm run build && node dist/mcp-server/client/geminiMcpClient.js",
+    "mcp:run-login": "npm run build && node dist/mcp-server/client/runLoginTitleViaMcp.js",
+    "mcp:manage-accounts": "npm run build && node dist/mcp-server/client/runManageAccountsViaMcp.js",
+    "test:extended": "npx playwright test tests/auth/login.spec.ts --grep \"extended suite\" --headed",
+    "allure:clean": "node scripts/clean.js allure",
+    "test:allure": "npm run allure:clean && npm run testrun -- tests/auth/login.spec.ts --allure && npm run allure:generate",
+    "test:api:allure": "npm run allure:clean && npm run testrun -- tests/api --allure && npm run allure:generate",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "allure:serve": "npx allure serve allure-results"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@modelcontextprotocol/sdk": "^1.4.1",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^20.11.24",
+    "ajv": "^8.20.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.7.1",
+    "typescript": "^5.3.3"
+  }
+}

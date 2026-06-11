@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"playwright": {
+			"command": "node",
+			"args": [
+				"dist/mcp-server/server.js"
+			],
+			"type": "stdio"
+		}
+	},
+	"inputs": []
+}

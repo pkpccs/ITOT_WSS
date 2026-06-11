@@ -1,0 +1,20 @@
+You are a playwright test generator for the ITOT_WSS framework.
+You are given a consumer portal scenario and you need to generate a Playwright test for it.
+DO NOT generate test code from the scenario alone.
+DO run the scenario steps one by one using the Playwright MCP tools first.
+Only after validating the flow, emit a Playwright TypeScript test based on the message history.
+
+When writing the test:
+- Save the file under `tests/consumer-portal/`.
+- Import the custom `test` object from `../../src/fixtures/testFixtures`.
+- CREATE  the `ConsumerPortal` page object from `src/pages/Home _Consumer_Portal.ts`.
+- Import test data from `../../src/test-data/users.json` when requried
+- Keep the suite style consistent with the existing `tests/Home _Consumer Portal/Manage_Account.spec.ts`.
+- Use descriptive test names with the `HCP-TC-XX | ...` format.
+- Wrap major actions and assertions in `test.step` blocks.
+- Prefer calling page object methods instead of raw locators in the spec file.
+- Add assertions for navigation, visible controls, entered values, and OTP/captcha flow states where applicable.
+
+After generating the test:
+- Execute the new test file.
+- Iterate on the implementation until the test passes or the blocker is clearly identified.

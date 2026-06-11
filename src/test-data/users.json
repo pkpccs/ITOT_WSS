@@ -1,0 +1,78 @@
+{
+  "validConsumer": {
+    "consumerNumber": "1165896032680",
+    "mobile": "8533962092",
+    "otp": "719496"
+  },
+  "billStatusConsumer": {
+    "consumerNumber": "1145065013388",
+    "otp": "719496",
+    "billNumber": "4507161203072"
+  },
+  "complaintRegistrationData": {
+    "complaintType": "VOLTAGE RELATED",
+    "complaintSubType": "VOLTAGE FLUCTUATION EXP/AUG REQUIRED",
+    "problemDescription": "Frequent power interruption observed since morning.",
+    "consumerNumber": "1145065013335",
+    "contactPerson": "Pradeep Kumar",
+    "mobile": "9876543210",
+    "landmark": "Near Main Market",
+    "address": "House No 101, Sector 15",
+    "district": "THIRUVANANTHAPURAM",
+    "section": "Alathiyoor Electrical Section",
+    "securityCode": ""
+  },
+  "complaintSuccessData": {
+    "complaintType": "VOLTAGE RELATED",
+    "complaintSubType": "VOLTAGE FLUCTUATION EXP/AUG REQUIRED",
+    "problemDescription": "ok",
+    "consumerNumber": "1145064013336",
+    "contactPerson": "pradeep",
+    "mobile": "9874563258",
+    "landmark": "noida",
+    "address": "noida",
+    "district": "THIRUVANANTHAPURAM",
+    "section": "Alathiyoor Electrical Section",
+    "securityCode": ""
+  },
+  "billCalculatorData": {
+    "tariff": "LT-1A",
+    "category": "Domestic",
+    "billingCycle": "2 months",
+    "consumedUnits": "100",
+    "phase": "2 months",
+    "extremelyHighUnits": "99999999999"
+  },
+  "advancedBillCalculatorData": {
+    "pricingType": "General TOD",
+    "tariff": "LT-1A Domestic",
+    "billingCycle": "Monthly",
+    "connectedLoad": "1",
+    "phase": "Single",
+    "meterOwner": "KSEB",
+    "unitConsumed": "100",
+    "extremelyHighUnits": "99999999999",
+    "tabNavigationConnectedLoad": "7",
+    "tabNavigationUnits": "321"
+  },
+  "manageAccountsData": {
+    "invalidConsumerNumber": "9999999999999",
+    "consumerNumberWithNoMobile": "1145065013388",
+    "consumerNumberWithRegisteredMobile": "1145064013336",
+    "existingConsumerNumber": "1156179020318",
+    "nickName": "SUNNY",
+    "nickNameInvalid": "Invalid Account",
+    "consumerType": "As Owner",
+    "consumerTypeValue": "As Owner",
+    "mappingExistsMessage": "Mapping already exists for this user and consumer."
+  },
+  "newRegistrationUser": {
+    "fullName": "mohan111",
+    "email": "mohan111@gmail.com",
+    "invalidEmail": "plkinn.com",
+    "mobile": "8368358999",
+    "Userid": "100014",
+    "password": "Admin@123",
+    "otp": "719496"
+  }
+}

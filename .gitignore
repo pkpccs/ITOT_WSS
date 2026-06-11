@@ -1,0 +1,18 @@
+node_modules/
+mcp-server/node_modules/
+playwright-report/
+test-results/
+test-results-api/
+.playwright-mcp/
+*.log
+storage/logs/*.log
+allure-results/
+allure-report/
+allure-report-bill-status/
+.sixth/
+.env
+
+# Playwright
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
