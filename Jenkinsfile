@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'TEST_ID', defaultValue: '', description: 'Enter specific test ID to run (e.g. LOG-TC-001). Leave blank to run all tests.')
+    }
+
     environment {
         // Set environment variables if needed
         CI = 'true'
@@ -32,9 +36,15 @@ pipeline {
             steps {
                 // catchError ensures the pipeline continues to the post block even if tests fail
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    // Running default test suite with Allure
-                    // If you want to parameterize this, you can replace this with bat "npm run ${params.TEST_SUITE}"
-                    bat 'npm run test:allure'
+                    script {
+                        if (params.TEST_ID?.trim()) {
+                            echo "Running specific test ID: ${params.TEST_ID}"
+                            bat "npx playwright test -g \"${params.TEST_ID}\" --reporter=line,allure-playwright"
+                        } else {
+                            echo "Running default test suite"
+                            bat 'npm run test:allure'
+                        }
+                    }
                 }
             }
         }
