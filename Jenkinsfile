@@ -39,7 +39,7 @@ pipeline {
                     script {
                         if (params.TEST_ID?.trim()) {
                             echo "Running specific test ID: ${params.TEST_ID}"
-                            bat "npx playwright test -g \"${params.TEST_ID}\" --reporter=line,allure-playwright"
+                            bat "npx playwright test -g \"${params.TEST_ID}\" --project=chromium --reporter=line,allure-playwright"
                         } else {
                             echo "Running default test suite"
                             bat 'npm run test:allure'
