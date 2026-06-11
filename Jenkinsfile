@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Using bat since the environment is Windows
                 bat 'npm install'
-                bat 'npx playwright install --with-deps chromium' // Install Playwright browsers (chromium)
+                bat 'npx playwright install --with-deps' // Install all Playwright browsers
             }
         }
 

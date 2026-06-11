@@ -55,12 +55,12 @@ export class LoginPage extends BasePage {
 
   async verifyOtpMobilePlaceholder() {
     await this.openOtpLogin();
-    await expect(this.page.locator("#otpIdentifierInput")).toHaveAttribute("placeholder", "Enter Mobile Number");
+    await expect(this.page.locator("#otpIdentifierInput")).toHaveAttribute("placeholder", "Enter Mobile Number or Email");
   }
 
   async verifyPasswordFieldPlaceholders() {
     await this.openPasswordLogin();
-    await expect(this.page.locator("#passwordUserIdInput")).toHaveAttribute("placeholder", "User Id");
+    await expect(this.page.locator("#passwordUserIdInput")).toHaveAttribute("placeholder", "User ID");
     await expect(this.page.locator("#passwordPasswordInput")).toHaveAttribute("placeholder", "Password");
   }
 
